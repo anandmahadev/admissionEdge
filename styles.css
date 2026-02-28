@@ -1001,6 +1001,11 @@ footer {
     transform: none
 }
 
+section {
+    content-visibility: auto;
+    contain-intrinsic-size: 0 500px;
+}
+
 @media(min-width:768px) {
     .hero-h1 {
         font-size: 4.5rem
