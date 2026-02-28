@@ -21,11 +21,11 @@ AdmissionEdge is a premium, high-conversion landing page for Mangalore's most tr
 
 ## 📂 Project Structure
 
-```text
-├── index.html      # Production entry point (Refined version)
-├── edge.html       # Alternative entry point / Original refinement
+├── index.html      # Production entry point
+├── edge.html       # Alternative entry point
+├── styles.css      # Consolidated stylesheet
+├── scripts.js      # Consolidated JavaScript logic
 └── .git/           # Version control history
-```
 
 ## 🛠️ Installation & Usage
 
