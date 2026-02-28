@@ -1069,3 +1069,32 @@ section {
         border-right: none
     }
 }
+
+@media print {
+
+    .nav,
+    .ham,
+    .drawer,
+    #fCta,
+    .footer-bottom,
+    .contact-form,
+    .up-wrap,
+    .lb-nav,
+    .lb-close,
+    .gf-wrap {
+        display: none !important;
+    }
+
+    body {
+        background: #fff;
+        color: #000;
+        font-size: 12pt;
+    }
+
+    section {
+        page-break-inside: avoid;
+        margin: 20px 0;
+        border: none !important;
+        box-shadow: none !important;
+    }
+}
