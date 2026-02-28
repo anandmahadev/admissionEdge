@@ -1098,3 +1098,41 @@ section {
         box-shadow: none !important;
     }
 }
+
+.g-tile.loading::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.4), transparent);
+    animation: shimmer 1.5s infinite;
+}
+
+@keyframes shimmer {
+    0% {
+        transform: translateX(-100%);
+    }
+
+    100% {
+        transform: translateX(100%);
+    }
+}
+
+#fOk {
+    background: #008000;
+    color: #fff;
+    padding: 12px 20px;
+    border-radius: 4px;
+    font-weight: 500;
+    margin-top: 15px;
+    display: none;
+    text-align: center;
+    box-shadow: var(--shadow);
+}
+
+#fOk.show {
+    display: block;
+    animation: rvIn .4s var(--ease);
+}
