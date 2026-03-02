@@ -390,6 +390,7 @@ img {
 }
 
 .stat-n {
+    transition: transform 0.4s var(--ease);
     font-family: 'DM Serif Display', serif;
     font-size: 2.4rem;
     color: var(--k);
