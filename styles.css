@@ -1027,6 +1027,7 @@ footer {
 }
 
 section {
+    scroll-margin-top: 60px;
     content-visibility: auto;
     contain-intrinsic-size: 0 500px;
 }
@@ -1097,6 +1098,7 @@ section {
     }
 
     section {
+    scroll-margin-top: 60px;
         page-break-inside: avoid;
         margin: 20px 0;
         border: none !important;
@@ -1141,6 +1143,7 @@ section {
     display: block;
     animation: rvIn .4s var(--ease);
 }
+
 
 
 
