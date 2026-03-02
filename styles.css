@@ -389,6 +389,7 @@ img {
     border-bottom: none
 }
 
+.stat-box:hover .stat-n { transform: scale(1.08); }
 .stat-n {
     transition: transform 0.4s var(--ease);
     font-family: 'DM Serif Display', serif;
@@ -1137,3 +1138,4 @@ section {
     display: block;
     animation: rvIn .4s var(--ease);
 }
+
