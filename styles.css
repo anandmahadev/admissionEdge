@@ -503,6 +503,7 @@ img {
 }
 
 .course-row:hover .c-icon {
+    color: var(--w);
     background: var(--k);
     transform: scale(1.1)
 }
@@ -1138,4 +1139,5 @@ section {
     display: block;
     animation: rvIn .4s var(--ease);
 }
+
 
