@@ -1012,6 +1012,7 @@ footer {
     transform: translateX(4px)
 }
 
+.socials { display: flex; gap: 20px; }
 /* REVEAL */
 .rv {
     opacity: 0;
@@ -1140,6 +1141,7 @@ section {
     display: block;
     animation: rvIn .4s var(--ease);
 }
+
 
 
 
