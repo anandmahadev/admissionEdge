@@ -926,6 +926,7 @@ img {
 }
 
 .ff.active {
+    background: #fff;
     background: var(--w);
     z-index: 2;
     box-shadow: inset 4px 0 0 var(--red)
@@ -1139,5 +1140,6 @@ section {
     display: block;
     animation: rvIn .4s var(--ease);
 }
+
 
 
