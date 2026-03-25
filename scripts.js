@@ -65,10 +65,23 @@ const AdmissionEdge = (() => {
 
   // UI - Floating CTA
   const initFloatingCTA = () => {
-    if (fCta && heroEl) {
+    const contactEl = document.getElementById('contact');
+    if (fCta && heroEl && contactEl) {
+      const showCTA = { hero: false, contact: false };
+      
+      const updateCTA = () => {
+        fCta.classList.toggle('show', showCTA.hero && !showCTA.contact);
+      };
+
       new IntersectionObserver((entries) => {
-        fCta.classList.toggle('show', !entries[0].isIntersecting);
+        showCTA.hero = !entries[0].isIntersecting;
+        updateCTA();
       }, { threshold: 0 }).observe(heroEl);
+
+      new IntersectionObserver((entries) => {
+        showCTA.contact = entries[0].isIntersecting;
+        updateCTA();
+      }, { threshold: 0 }).observe(contactEl);
     }
   };
 
