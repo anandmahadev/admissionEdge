@@ -1,4 +1,4 @@
-# AdmissionEdge Mangalore 🎓
+# AdmissionEdge Mangalore 2026 🎓
 
 AdmissionEdge is a premium, high-conversion landing page for Mangalore's most trusted admission consultancy. Established in 2012, AdmissionEdge provides expert guidance for Medical, Engineering, MBA, and Law admissions with a focus on transparency and local expertise.
 
@@ -36,7 +36,7 @@ Since this is a vanilla web project, you don't need any build tools or dependenc
     git clone https://github.com/anandmahadev/admissionEdge.git
     ```
 2.  **Open the site**:
-    Simply open `index.html` in any modern web browser.
+    Simply open `index.html` in any modern web browser (Edge, Chrome, Safari).
 
 ## 📈 SEO & Performance
 
