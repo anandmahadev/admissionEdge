@@ -32,6 +32,7 @@ const AdmissionEdge = (() => {
             drawer.classList.remove('open');
             document.body.style.overflow = '';
             hamBtn.setAttribute('aria-expanded', 'false');
+            drawer.setAttribute('aria-hidden', 'true');
         }
     };
 
@@ -44,10 +45,15 @@ const AdmissionEdge = (() => {
                 hamBtn.classList.toggle('open');
                 document.body.style.overflow = isOpen ? 'hidden' : '';
                 hamBtn.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+                drawer.setAttribute('aria-hidden', isOpen ? 'false' : 'true');
             });
 
             document.addEventListener('click', (e) => {
                 if (!hamBtn.contains(e.target) && !drawer.contains(e.target)) closeD();
+            });
+
+            document.addEventListener('keydown', (e) => {
+                if (e.key === 'Escape') closeD();
             });
         }
     };
