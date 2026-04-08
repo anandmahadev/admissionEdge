@@ -30,6 +30,8 @@ AdmissionEdge is a premium, high-conversion landing page for Mangalore's most tr
 
 Since this is a vanilla web project, you don't need any build tools or dependencies.
 
+GitHub currently shows `master` as the default branch, while `main` is kept in sync with the same history.
+
 1.  **Clone the repository**:
     ```bash
     git clone https://github.com/anandmahadev/admissionEdge.git
