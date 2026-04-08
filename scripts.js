@@ -38,6 +38,10 @@ const AdmissionEdge = (() => {
 
     window.closeD = closeD;
 
+    if (drawer) {
+        drawer.setAttribute('aria-hidden', 'true');
+    }
+
     const initDrawer = () => {
         if (hamBtn && drawer) {
             hamBtn.addEventListener('click', () => {
