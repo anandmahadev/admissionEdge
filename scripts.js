@@ -99,9 +99,17 @@ const AdmissionEdge = (() => {
                 e.preventDefault();
                 const checks = [
                     { id: 'f1', ff: 'ff1', fe: 'fe1', ok: (v) => v.trim().length >= 2 },
-                    { id: 'f2', ff: 'ff2', fe: 'fe2', ok: (v) => /^\+?[\d\s\-]{10,14}$/.test(v.replace(/\s/g, '')) },
-                    { id: 'f3', ff: 'ff3', fe: 'fe3', ok: (v) => /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v) },
-                    { id: 'f4', ff: 'ff4', fe: 'fe4', ok: (v) => v !== '' }
+                    {
+                        id: 'f2',
+                        ff: 'ff2',
+                        fe: 'fe2',
+                        ok: (v) => {
+                            const digits = v.replace(/\D/g, '');
+                            return digits.length >= 10 && digits.length <= 15;
+                        }
+                    },
+                    { id: 'f3', ff: 'ff3', fe: 'fe3', ok: (v) => /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v.trim()) },
+                    { id: 'f4', ff: 'ff4', fe: 'fe4', ok: (v) => v.trim() !== '' }
                 ];
 
                 checks.forEach((c) => {
@@ -114,7 +122,8 @@ const AdmissionEdge = (() => {
                 let valid = true;
                 checks.forEach((c) => {
                     const field = document.getElementById(c.id);
-                    if (field && !c.ok(field.value)) {
+                    const value = field ? field.value : '';
+                    if (field && !c.ok(value)) {
                         const ff = document.getElementById(c.ff);
                         const fe = document.getElementById(c.fe);
                         if (ff) ff.classList.add('err');
@@ -278,10 +287,14 @@ const AdmissionEdge = (() => {
             if (!lb || !lb.classList.contains('open')) return;
             if (e.key === 'Escape') closeLightbox();
             const filtered = activeFil === 'all' ? posters : posters.filter((p) => p.cat === activeFil);
-            if (e.key === 'ArrowLeft') { lbIdx = (lbIdx - 1 + filtered.length) % filtered.length;
-                openLightbox(filtered); }
-            if (e.key === 'ArrowRight') { lbIdx = (lbIdx + 1) % filtered.length;
-                openLightbox(filtered); }
+            if (e.key === 'ArrowLeft') {
+                lbIdx = (lbIdx - 1 + filtered.length) % filtered.length;
+                openLightbox(filtered);
+            }
+            if (e.key === 'ArrowRight') {
+                lbIdx = (lbIdx + 1) % filtered.length;
+                openLightbox(filtered);
+            }
         });
 
         renderGallery();
