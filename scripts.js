@@ -208,6 +208,7 @@ const AdmissionEdge = (() => {
 
     const openLightbox = (list) => {
         if (!lb || !lbImg || !lbTag || !lbTitle) return;
+        if (!list.length) return;
         const p = list[lbIdx];
         lbImg.src = p.src;
         lbTag.textContent = getCatLabel(p.cat);
@@ -274,11 +275,13 @@ const AdmissionEdge = (() => {
 
         if (lbPrev) lbPrev.addEventListener('click', () => {
             const filtered = activeFil === 'all' ? posters : posters.filter((p) => p.cat === activeFil);
+            if (!filtered.length) return;
             lbIdx = (lbIdx - 1 + filtered.length) % filtered.length;
             openLightbox(filtered);
         });
         if (lbNext) lbNext.addEventListener('click', () => {
             const filtered = activeFil === 'all' ? posters : posters.filter((p) => p.cat === activeFil);
+            if (!filtered.length) return;
             lbIdx = (lbIdx + 1) % filtered.length;
             openLightbox(filtered);
         });
@@ -287,6 +290,7 @@ const AdmissionEdge = (() => {
             if (!lb || !lb.classList.contains('open')) return;
             if (e.key === 'Escape') closeLightbox();
             const filtered = activeFil === 'all' ? posters : posters.filter((p) => p.cat === activeFil);
+            if (!filtered.length) return;
             if (e.key === 'ArrowLeft') {
                 lbIdx = (lbIdx - 1 + filtered.length) % filtered.length;
                 openLightbox(filtered);
