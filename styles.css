@@ -40,6 +40,11 @@ body {
 }
 
 a {
+    .foot-bottom {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 12px
+    }
     color: inherit;
     text-decoration: none;
     transition: all .3s var(--ease)
