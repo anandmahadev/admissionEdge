@@ -1,19 +1,19 @@
 # AdmissionEdge Mangalore 2026 🎓
 
-AdmissionEdge is a premium, high-conversion landing page for Mangalore's most trusted admission consultancy. Established in 2012, AdmissionEdge provides expert guidance for Medical, Engineering, MBA, and Law admissions with a focus on transparency and local expertise.
+AdmissionEdge is a premium, high-conversion landing page for Mangalore's most trusted admission consultancy. Established in 2012, AdmissionEdge provides expert guidance for Medical, Engineering, MBA, and Law admissions with a focus on transparency, local expertise, and fast mobile-first inquiry handling.
 
 ## ✨ Features
 
 - **Editorial Design System**: A sophisticated, glassmorphic aesthetic with a focus on typography and whitespace.
 - **Premium Micro-interactions**: Smooth, staggered scroll animations and refined hover states for an engaging user experience.
 - **SVG Iconography**: Custom-coded SVG icons replacing standard emojis for a professional, consistent look.
-- **Responsive Architecture**: Fully optimized for mobile, tablet, and desktop with a dynamic slide-in navigation drawer.
+- **Responsive Architecture**: Fully optimized for mobile, tablet, and desktop with a dynamic slide-in navigation drawer and compact small-screen layout.
 - **Interactive Gallery**: A built-in admission poster gallery with category filtering and a full-screen lightbox.
-- **Smart Contact Form**: Integrated validation and focus-aware styling for higher lead generation.
+- **Smart Contact Form**: Integrated validation, focus-aware styling, and clearer error handling for higher lead generation.
 
 ## 🚀 Technical Stack
 
-- **Structure**: HTML5 Semantic Markup
+- **Structure**: HTML5 semantic markup with two entry pages (`index.html` and `edge.html`)
 - **Styling**: Vanilla CSS (Custom Properties, Flexbox, CSS Grid)
 - **Logic**: Vanilla JavaScript (ES6+)
 - **Typography**: Sora, DM Serif Display, DM Mono (via Google Fonts)
@@ -21,11 +21,10 @@ AdmissionEdge is a premium, high-conversion landing page for Mangalore's most tr
 
 ## 📂 Project Structure
 
-├── index.html      # Production entry point
-├── edge.html       # Alternative entry point
+├── index.html      # Primary production entry point
+├── edge.html       # Alternate entry point
 ├── styles.css      # Consolidated stylesheet
-├── scripts.js      # Consolidated JavaScript logic
-└── .git/           # Version control history
+└── scripts.js      # Consolidated JavaScript logic
 
 ## 🛠️ Installation & Usage
 
