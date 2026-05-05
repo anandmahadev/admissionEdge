@@ -318,7 +318,7 @@ img {
 .hero-h1 {
     font-family: 'DM Serif Display', serif;
     font-size: 3.2rem;
-    line-height: 1.05;
+    line-height: 1.08;
     color: var(--k);
     font-weight: 400;
     letter-spacing: -0.03em
@@ -397,7 +397,7 @@ img {
     padding: 24px;
     border-right: var(--b);
     border-bottom: var(--b);
-    transition: background .3s var(--ease)
+    transition: background .4s var(--ease)
 }
 
 .stat-box:hover {
@@ -812,7 +812,7 @@ img {
 }
 
 .upload-lbl {
-    font-size: 14px;
+    font-size: 15px;
     font-weight: 600;
     color: var(--k);
     display: block;
@@ -842,6 +842,7 @@ img {
     transition: all .3s var(--ease)
 }
 
+/* Active filter pill */
 .gf.on {
     background: var(--k);
     color: var(--w)
@@ -1019,7 +1020,7 @@ footer {
 .foot-brand-txt {
     font-size: 14px;
     color: var(--dim);
-    line-height: 1.8;
+    line-height: 1.75;
     font-weight: 300;
     margin-top: 16px;
     max-width: 500px

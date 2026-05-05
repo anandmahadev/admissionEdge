@@ -64,6 +64,7 @@ const AdmissionEdge = (() => {
 
     // UI - Reveal Animations
     const initReveal = () => {
+        // Trigger when 6% of element enters viewport; 20px bottom margin avoids premature firing
         const revObs = new IntersectionObserver((entries) => {
             entries.forEach((e, i) => {
                 if (e.isIntersecting) {
@@ -107,6 +108,7 @@ const AdmissionEdge = (() => {
         if (cForm) {
             cForm.addEventListener('submit', function(e) {
                 e.preventDefault();
+                // Each check: field id, form-field wrapper id, error id, and validator fn
                 const checks = [
                     { id: 'f1', ff: 'ff1', fe: 'fe1', ok: (v) => v.trim().length >= 2 },
                     {
