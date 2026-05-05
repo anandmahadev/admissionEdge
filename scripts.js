@@ -64,6 +64,7 @@ const AdmissionEdge = (() => {
 
     // UI - Reveal Animations
     const initReveal = () => {
+        // Trigger when 6% of element enters viewport; 20px bottom margin avoids premature firing
         const revObs = new IntersectionObserver((entries) => {
             entries.forEach((e, i) => {
                 if (e.isIntersecting) {
