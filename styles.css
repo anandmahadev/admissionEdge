@@ -397,7 +397,7 @@ img {
     padding: 24px;
     border-right: var(--b);
     border-bottom: var(--b);
-    transition: background .3s var(--ease)
+    transition: background .4s var(--ease)
 }
 
 .stat-box:hover {
